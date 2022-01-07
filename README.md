@@ -10,7 +10,7 @@ There are many components in this boilerplate that do not require an active web3
 
 Please check the [official documentation of Moralis](https://docs.moralis.io/#user) for all the functionalities of Moralis.
 
-![Dapp](https://user-images.githubusercontent.com/78314301/140835102-0f3b2549-e199-47aa-bc60-f6b601bd79e9.gif)
+![daPPdemo](https://user-images.githubusercontent.com/78314301/147088732-e8bbd451-9351-4338-879c-b1535f4df319.gif)
 
 # ⭐️ `Star us`
 If this boilerplate helps you build Ethereum dapps faster - please star this project, every star makes us very happy!
@@ -192,13 +192,30 @@ const [address, setAddress] = useState();
 
 ![dex](https://user-images.githubusercontent.com/78314301/141123450-02c2710e-7988-45de-80ad-5fc45d2bccfa.gif)
 
-💱 `<InchDex />` : interface for [Moralis 1Inch Plugin](https://moralis.io/plugins/1inch?utm_source=github&utm_medium=readme&utm_campaign=ethereum-boilerplate). This plugin integrates the DeFi / DEX aggregator 1Inch to any project that uses Moralis.
+💱 `<DEX />` : interface for [Moralis 1Inch Plugin](https://moralis.io/plugins/1inch?utm_source=github&utm_medium=readme&utm_campaign=ethereum-boilerplate). This plugin integrates the DeFi / DEX aggregator 1Inch to any project that uses Moralis.
 
 **Options**:
 - chain (optional): network. Available: Ethereum (“eth”), Binance Smart Chain (“bsc”), Polygon (“polygon”)
+- customTokens (optional): object with custom tokens. You can see the example below.
 
 ```jsx
-<InchDex chain="eth" />
+<DEX chain="eth" />
+```
+
+```jsx
+// Adding custom tokens
+
+const customTokens = {
+    "0x2180F5cC1ddf117640963AE91868948bd3EF6838": {
+      address: "0x2180F5cC1ddf117640963AE91868948bd3EF6838",
+      decimals: 9,
+      logoURI: "https://assets.coingecko.com/coins/images/20985/small/_VoQPDDs_400x400.jpg?1638168643",
+      name: "AscensionArcade",
+      symbol: "AAT",
+    },
+  };
+
+<DEX chain="eth" customTokens={customTokens} />
 ```
 
 
